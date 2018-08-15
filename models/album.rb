@@ -4,7 +4,8 @@ require_relative ('artist')
 
 class Album
 
-  attr_reader :id, :title, :genre, :artist_id
+  attr_reader :id, :artist_id
+  attr_accessor :title, :genre
 
   def initialize(info)
     @id = info['id'].to_i if info['id']
@@ -39,5 +40,5 @@ class Album
     sql = "DELETE FROM albums"
     SqlRunner.run( sql )
   end
-  
+
 end

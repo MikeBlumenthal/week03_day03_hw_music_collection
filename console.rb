@@ -7,8 +7,14 @@ require_relative('models/album')
     'name' => 'Radiohead'
     })
 
-  artist1.save
+  album1 = Album.new({
+    'title' => 'OK Computer',
+    'genre' => 'Rock',
+    'artist_id' => 2
+    })
 
+  artist1.save
+  album1.save
 
 
 binding.pry

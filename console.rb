@@ -23,7 +23,7 @@ Artist.delete_all
     'genre' => 'Rock',
     'artist_id' => artist1.id
     })
-    
+
   album1.save
   album2.save
 

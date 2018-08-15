@@ -18,7 +18,14 @@ Artist.delete_all
     'artist_id' => artist1.id
     })
 
+  album2 = Album.new({
+    'title' => 'The Bends',
+    'genre' => 'Rock',
+    'artist_id' => artist1.id
+    })
+    
   album1.save
+  album2.save
 
 
 binding.pry

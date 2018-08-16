@@ -48,6 +48,13 @@ class Album
     return albums.map { |album| Album.new(album) }
   end
 
+  def Album.find_by_id(id)
+    sql = "SELECT * FROM albums where id = $1"
+    values = [id]
+    result = SqlRunner.run( sql, values )
+    return result[0]
+  end
+
   def Album.delete_all()
     sql = "DELETE FROM albums"
     SqlRunner.run( sql )

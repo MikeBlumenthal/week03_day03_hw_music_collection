@@ -45,7 +45,6 @@ class Artist
     return artists.map { |artist| Artist.new(artist) }
   end
 
-
   def Artist.find_by_id(id)
     sql = "SELECT * FROM artists where id = $1"
     values = [id]
